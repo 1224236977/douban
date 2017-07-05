@@ -1,0 +1,119 @@
+<template>
+  <div class="tv_main">
+    <AudioItem v-for="(item,index) in arr" :key="item.id":tlt="item.tlt">
+      <Banner swiperid="swiper03" :loop='false' :pagination="false" :touchRatio="1" :autoplay="0" :slidesPerView="3.5">
+        <div class="swiper-slide" slot="swiper-con" v-for="(item2,index) in item.inArr">
+          <AudioPic :key="item.id" :adurl="item2.adurl" :name="item2.name" :comment="item2.comment"></AudioPic>
+        </div>
+      </Banner>
+    </AudioItem>
+  </div>
+</template>
+<script>
+  import AudioItem from './AudioItem'
+  import AudioPic from './AudioPic'
+  import Banner from './Bannere'
+  export default{
+    components:{
+      AudioItem,
+      AudioPic,
+      Banner
+    },
+    data:function () {
+      return{
+        arr:[
+          {
+            tlt:"今日更新",
+            inArr:[
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+            ]
+          },
+          {
+            tlt:"近期值得看的国产剧",
+            inArr:[
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+              {
+                adurl:require('../assets/images/audiopic_03.jpg'),
+                name:'神奇女侠',
+                comment:"暂无评论"
+              },
+            ]
+          }
+        ]
+      }
+    }
+  }
+</script>

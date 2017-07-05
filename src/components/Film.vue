@@ -1,0 +1,127 @@
+<template>
+  <div class="film_main">
+      <AudioItem v-for="(item,index) in arr" :key="item.id" :tlt="item.tlt">
+        <Banner swiperid="swiper03" :loop='false' :pagination="false" :touchRatio="1" :autoplay="0" :slidesPerView="3.5">
+          <div class="swiper-slide" slot="swiper-con" v-for="(item2,index) in item.inArr">
+            <AudioPic :key="item2.id" :adurl="item2.adurl" :name="item2.name" :comment="item2.comment"></AudioPic>
+          </div>
+        </Banner>
+      </AudioItem>
+  </div>
+</template>
+<script>
+  import AudioItem from './AudioItem'
+  import AudioPic from './AudioPic'
+  import Banner from './Bannere'
+  export default{
+    components:{
+        AudioItem,
+        AudioPic,
+        Banner
+    },
+    data:function () {
+      return{
+          arr:[
+            {
+                tlt:"影院热映",
+                inArr:[
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                  {
+                    adurl:require('../assets/images/film_03.jpg'),
+                    name:'小情人',
+                    comment:"暂无评论"
+                  },
+                ]
+            },
+            {
+              tlt:"院线即将上映",
+              inArr:[
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+                {
+                  adurl:require('../assets/images/film_03.jpg'),
+                  name:'小情人',
+                  comment:"暂无评论"
+                },
+              ]
+            }
+          ]
+      }
+    }
+  }
+</script>
+<style>
+  .film_main,.book_main,.tv_main,.city_main,.music_main{background-color: #f7f7f7;padding-top: 0.1rem;text-align: left}
+</style>
